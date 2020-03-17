@@ -4,9 +4,10 @@ public class StudentController{
     private Student model ;
     private StudentView view ;
 
-    public StudentController(){
-
-    }
+    public StudentController(Student model, StudentView view){
+        this.model = model;
+        this.view = view;
+     }
 
     public String getStudentName(){
 
@@ -31,7 +32,8 @@ public class StudentController{
 
     public void updateView(){
 
-        view.printStudentDetails();
+        view.printStudentDetails(model.getName(), model.getRollNo());
+
     }
 
 
